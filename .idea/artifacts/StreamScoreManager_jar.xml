@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StreamScoreManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/StreamScoreManager_jar</output-path>
+    <root id="archive" name="StreamScoreManager.jar">
+      <element id="module-output" name="StreamScoreManager" />
+    </root>
+  </artifact>
+</component>

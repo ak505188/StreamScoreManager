@@ -37,6 +37,17 @@ public class Main extends JFrame{
         Name1 = name1;
         Name2 = name2;
     }//UpdateNames
+    static public void SwapNames (){
+        String temp = Name1;
+        Name1 = Name2;
+        Name2 = temp;
+    }//SwapNames
+    static public String getName1 (){
+        return Name1;
+    }//getName1
+    static public String getName2 (){
+        return Name2;
+    }//getName2
     static public int changeScore1(int num){
         if (num < 0)
             Score1++;
@@ -66,6 +77,7 @@ public class Main extends JFrame{
         final JTextField TextScore2 = new JTextField(3);
         final JTextField TextName2 = new JTextField(40);
         JButton Apply = new JButton("Apply");
+        JButton SwapNames = new JButton("Swap Names");
         JButton ResetScores = new JButton("Reset Scores");
         JButton ClearAll = new JButton("Clear All");
         frame.add(Plus1);
@@ -75,6 +87,7 @@ public class Main extends JFrame{
         frame.add(TextScore2);
         frame.add(TextName2);
         frame.add(Apply);
+        frame.add(SwapNames);
         frame.add(ResetScores);
         frame.add(ClearAll);
         TextScore1.setText("0");
@@ -97,6 +110,16 @@ public class Main extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 UpdateNames(TextName1.getText(), TextName2.getText());
+                UpdateFiles();
+            }
+        });
+        SwapNames.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UpdateNames(TextName1.getText(), TextName2.getText());
+                SwapNames();
+                TextName1.setText(getName1());
+                TextName2.setText(getName2());
                 UpdateFiles();
             }
         });
