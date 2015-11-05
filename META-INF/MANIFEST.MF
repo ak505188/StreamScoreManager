@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: C:\Users\Sasha\Documents\GitHub\StreamScoreManager\out\pro
- duction\Main.class
-Main-Class: Main.java
-
